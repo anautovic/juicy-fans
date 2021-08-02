@@ -1,29 +1,33 @@
-import {useContext } from  'react'
+import {useContext} from 'react'
 import {DataContext} from '../store/GlobalState'
-import Loading from  './Loading'
+import Loading from './Loading'
 import Toast from './Toast'
 
 const Notify = () => {
-    const [state, dispatch] = useContext(DataContext)
-    const {notify} = state
-    return (
-        <div>
-           {notify.loading && <Loading />} 
-           {notify.error &&     
-           <Toast 
-           msg={{msg: notify.err, title:"Error"}}
-           handleShow={() => dispatch({ type:'NOTIFY', payload: {}   })}
-           bgColor = "bg-danger"
-           
-           />}
-           {notify.success && 
-            <Toast
-            msg={{msg: notify.success, title:"SUCCESS"}}
-           handleShow={() => dispatch({ type:'NOTIFY', payload: {}   })}
-           bgColor = "bg-success"
-             />}
-        </div>
+    const {state, dispatch} = useContext(DataContext)
+    const { notify } = state
+
+    return(
+        <> 
+            {notify.loading && <Loading />}
+            {notify.error && 
+                <Toast
+                    msg={{ msg: notify.error, title: "Error" }}
+                    handleShow={() => dispatch({ type: 'NOTIFY', payload: {} })}
+                    bgColor="bg-danger"
+                />
+            }
+
+            {notify.success && 
+                <Toast
+                    msg={{ msg: notify.success, title: "Success" }}
+                    handleShow={() => dispatch({ type: 'NOTIFY', payload: {} })}
+                    bgColor="bg-success"
+                />
+            }
+        </>
     )
 }
+
 
 export default Notify

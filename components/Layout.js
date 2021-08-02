@@ -1,20 +1,17 @@
 import React from 'react'
-
-import  NavBar from './NavBar'
+import NavBar from './NavBar'
 import Notify from './Notify'
-const Layout = ({children}) => {
+import Modal from './Modal'
+
+function Layout({children}) {
     return (
-        <div>
-          <NavBar />
-          <Notify />
-         {children} 
+        <div className="container">
+            <NavBar />
+            <Notify />
+            <Modal />
+            {children}
         </div>
     )
 }
 
 export default Layout
-
-
-
-
-

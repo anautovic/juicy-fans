@@ -1,6 +1,12 @@
 module.exports = {
 env: {
-    "BASE_URL":"http://localhost:3000" ,
-    "MONGODB_URL":"mongodb://localhost:27017/strapi" 
+    BASE_URL:"http://localhost:3000" ,
+    MONGODB_URL:"mongodb://localhost:27017/strapi",
+    ACCESS_TOKEN_SECRET: "$U[$rRqYU/f2L~Wfp!'$Zqf5N.xTD`9C-FRwSY(D/Z_RD.&U9Q",
+    REFRESH_TOKEN_SECRET: "pC\\urMUPmv}Rr-krJJB`NPBH/T]ZsVu+jsw2PHW-M3{.3RJ;vhUsPjh55V+wfC=qgPgcn&[vM=wnN+N",
+    CLOUD_UPDATE_PRESET: "nextjs_store",
+    CLOUD_NANE: "wil",
+    
+    CLOUD_API: "https://api.cloudinary.com/v1_1/wil/image/upload"
 }
 }
