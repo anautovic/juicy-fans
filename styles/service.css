@@ -1,0 +1,15 @@
+.service-container-bg {
+    padding-top: 100px;
+}
+.service-container{
+    min-height: 50vh;
+}
+.service-img {
+    width:200px;
+}
+.background{
+    background-image: url('../public/crumpled-paper-background.jpg');
+    opacity: 8;
+    
+   
+}

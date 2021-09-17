@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import {useRouter} from 'next/router'
 import {DataContext} from '../store/GlobalState'
 import Cookie from 'js-cookie'
@@ -68,16 +69,53 @@ function NavBar() {
     }
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div >
+        <nav className="navbar navbar-expand-lg navbar-light bg-light " style={{fontFamily:'Abril fatface', 
+         marginBottom:'0px', paddingBottom:'0px', fontSize:'1.2rem'
+         
+        }}>
             <Link  href="/">
-                <a className="navbar-brand">DEVAT</a>
+                
+                <a className="navbar-brand py-0 my-0" >
+                <span style ={{
+                color:'orange',
+                fontFamily:'Archivo Black',
+                
+                fontSize: '22px'
+              }}>JUICY FAN'S</span> <span className="text-danger font-weight-medium"
+              style ={{
+                
+                fontFamily:'Brush Script MT',
+                fontSize: '25px'
+              }}
+              >Et Caetera...</span>
+    
+  </a>
             </Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul className="navbar-nav p-1">
+                    
                     <li className="nav-item">
+                        <Link href="/">
+        <a className={"nav-link" + isActive('/')}>Accueil</a>
+        </Link>
+               </li>
+
+               
+      <li className="nav-item">
+                        <Link href="/eshop">
+        <a className={"nav-link" + isActive('/eshop')}>e-Boutique</a>
+        </Link>
+               </li>
+               <li className="nav-item">
+                        <Link href="/contact">
+        <a className={"nav-link" + isActive('/contact')}>Contact</a>
+        </Link>
+               </li>
+               <li className="nav-item">
                         <Link href="/cart">
                             <a className={"nav-link" + isActive('/cart')}>
                                 <i className="fas fa-shopping-cart position-relative" aria-hidden="true">
@@ -97,12 +135,14 @@ function NavBar() {
                             </a>
                         </Link>
                     </li>
+
+
                     {
                         Object.keys(auth).length === 0 
                         ? <li className="nav-item">
                             <Link href="/signin">
                                 <a className={"nav-link" + isActive('/signin')}>
-                                    <i className="fas fa-user" aria-hidden="true"></i> Sign in
+                                    <i className="fas fa-user" aria-hidden="true"></i> Connexion
                                 </a>
                             </Link>
                         </li>
@@ -111,6 +151,7 @@ function NavBar() {
                 </ul>
             </div>
         </nav>
+        </div>
     )
 }
 

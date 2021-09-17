@@ -33,7 +33,7 @@ const Filter = ({state}) => {
                 <select className="custom-select text-capitalize"
                 value={category} onChange={handleCategory}>
 
-                    <option value="all">All Products</option>
+                    <option value="all">Tousles Products</option>
 
                     {
                         categories.map(item => (
@@ -52,11 +52,11 @@ const Filter = ({state}) => {
                 <select className="custom-select text-capitalize"
                 value={sort} onChange={handleSort}>
 
-                     <option value="-createdAt">Newest</option>
+                     <option value="-createdAt">Nouveau</option>
                      <option value="oldest">Oldest</option>
-                     <option value="-sold">Best sales</option>
-                     <option value="-price">Price: Hight-Low</option>
-                     <option value="price">Price: Low-Hight</option>
+                     <option value="-sold">Top vente</option>
+                     <option value="-price">Prix: Hight-Low</option>
+                     <option value="price">Prix: Low-Hight</option>
 
                 </select>
             </div>

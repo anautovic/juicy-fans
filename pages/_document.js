@@ -1,4 +1,5 @@
 import Document, {Html, Head, Main, NextScript} from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
 
 class MyDocument extends Document{
     render(){
@@ -13,10 +14,12 @@ class MyDocument extends Document{
                    {/*<script src={`https://www.paypal.com/sdk/js?client-id=${process.env.PAYPAL_CLIENT_ID}`}></script>
                    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
                    */} 
+                   <script type="text/javascript" src="getbutton.js"></script>
                 </Head>
                 <body>
                     <Main />
                     <NextScript />
+                   
                 </body>
             </Html>
         )

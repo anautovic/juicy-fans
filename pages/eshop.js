@@ -63,7 +63,7 @@ const Home = (props) => {
   return(
     <div className="home_page">
       <Head>
-        <title>Patchouli mega store</title>
+        <title>Achat en ligne</title>
       </Head>
 
       <Filter state={state} />
@@ -85,7 +85,7 @@ const Home = (props) => {
       <div className="products">
         {
           products.length === 0 
-          ? <h2>No Products</h2>
+          ? <h2>Nos Products</h2>
 
           : products.map(product => (
             <ProductItem key={product._id} product={product} handleCheck={handleCheck} />
